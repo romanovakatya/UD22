@@ -11,14 +11,13 @@ public class DataBase extends Conexion{
 	// atributos,
 	protected Connection conexion;
 	protected String db;
-	protected String tableName = "cliente";
 
-	protected String QueryCreateTable = "CREATE TABLE clientes (\r\n" + "id int(11) AUTO_INCREMENT NOT NULL,\r\n"
+	public String QueryCreateTable = "CREATE TABLE clientes (\r\n" + "id int(11) AUTO_INCREMENT NOT NULL,\r\n"
 			+ "nombre varchar(250) DEFAULT NULL,\r\n" + "apellido varchar(250) DEFAULT NULL,\r\n"
 			+ "direccion varchar(250) DEFAULT NULL,\r\n" + "dni int(11) DEFAULT NULL,\r\n"
 			+ "fecha date DEFAULT NULL,\r\n" + "primary key (id)" + ");";
 
-	protected String QueryInsertData = "INSERT INTO clientes (nombre, apellido, direccion, dni, fecha)"
+	public String QueryInsertData = "INSERT INTO clientes (nombre, apellido, direccion, dni, fecha)"
 			+ "VALUES ('Pepe', 'Rocio', 'París', 109283745, '1987-02-22'), "
 			+ "('Laura', 'Bennet', 'Madrid', 981236547, '2001-04-01'), "
 			+ "('Felipe', 'Josep', 'London', 258741369, '1999-01-18'), "
@@ -34,7 +33,7 @@ public class DataBase extends Conexion{
 			+ "primary key (id),\r\n"
 			+ "CONSTRAINT videos_fk FOREIGN KEY (cliente_id)"
 			+ "REFERENCES clientes (id)"
-			+ "on delete SET NULL\r\n"
+			+ "on delete cascade\r\n"
 			+ "on update cascade\r\n" + ");";
 	
 	public String QueryInsertDataVideo = "INSERT INTO videos (title, director, cliente_id)"

@@ -61,7 +61,9 @@ public class ControllerCientificoIndex {
 			MouseAdapter mouse = new MouseAdapter() {
 				@Override
 				public void mouseClicked(MouseEvent e) {
-
+					
+					vistaIndex.dispose();
+					
 					System.out.println("add");
 					VistaCientificoCreate frameCreate = new VistaCientificoCreate();
 					ControllerCientificoCreate controllerCreate = new ControllerCientificoCreate(frameCreate);
@@ -80,6 +82,7 @@ public class ControllerCientificoIndex {
 				public void mouseClicked(MouseEvent e) {
 					System.out.println("show");
 
+					vistaIndex.dispose();
 					VistaCientificoShow frameShow = new VistaCientificoShow();												
 					ControllerCientificoShow controllerShow = new ControllerCientificoShow(dNI, frameShow);
 					controllerShow.iniciarVista();

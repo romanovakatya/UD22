@@ -5,8 +5,10 @@ import java.awt.event.MouseEvent;
 
 import javax.swing.JFrame;
 
+import vistas.VistaAsignacionIndex;
 import vistas.VistaCientificoIndex;
 import vistas.VistaMain;
+import vistas.VistaProyectoIndex;
 
 
 public class ControllerMain {
@@ -36,7 +38,7 @@ public class ControllerMain {
 			public void mouseClicked(MouseEvent e) {
 
 				System.out.println("Cientifico");
-				// llamamos la vista principal con datos de todos los clientes,
+				// llamamos la vista principal con datos de todos los cienntificos,
 				VistaCientificoIndex frameIndexCientificos = new VistaCientificoIndex();
 				ControllerCientificoIndex controllerIndex = new ControllerCientificoIndex(frameIndexCientificos);
 				controllerIndex.iniciarVista();
@@ -53,12 +55,11 @@ public class ControllerMain {
 			public void mouseClicked(MouseEvent e) {
 
 				System.out.println("Proyecto");
-				// llamamos la vista principal con datos de todos los videos,
-				/*Proyecto proyecto = new Proyecto();
+				// llamamos la vista principal con datos de todos los proyectos,
 				VistaProyectoIndex frameIndexProyectos = new VistaProyectoIndex();
-				ControllerProyectoIndex controllerIndexVideos = new ControllerProyectoIndex(proyecto,
+				ControllerProyectoIndex controllerIndexProyectos = new ControllerProyectoIndex(
 						frameIndexProyectos);
-				controllerIndexVideos.iniciarVista();*/
+				controllerIndexProyectos.iniciarVista();
 			}
 		};
 
@@ -73,12 +74,10 @@ public class ControllerMain {
 				public void mouseClicked(MouseEvent e) {
 
 					System.out.println("Asignado");
-					// llamamos la vista principal con datos de todos los videos,
-				/*	ProyectoAsignaACientifico asignar = new ProyectoAsignaACientifico();
-					VistaIndexAsignar frameIndexAsignar = new VistaIndexAsignar();
-					ControllerIndexAsignar controllerIndexAsignar = new ControllerIndexAsignar(asignar,
-							frameIndexAsignar);
-					controllerIndexAsignar.iniciarVista();*/
+					// llamamos la vista principal con datos de todas las asignaciones,
+					VistaAsignacionIndex frameIndexAsignar = new VistaAsignacionIndex();
+					ControllerAsignacionIndex controllerIndexAsignar = new ControllerAsignacionIndex(frameIndexAsignar);
+					controllerIndexAsignar.iniciarVista();
 				}
 			};
 

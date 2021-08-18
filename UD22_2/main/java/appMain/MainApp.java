@@ -13,6 +13,8 @@ public class MainApp {
 	public static void main(String[] args) {
 		
 		//DataBase db = new DataBase("UD22");
+		//db.crearTabla("clientes", db.QueryCreateTable);
+		//db.insertData("clientes", db.QueryInsertData);
 		//db.crearTabla("videos", db.QueryCreateTableVideo);
 		//db.insertData("videos", db.QueryInsertDataVideo);
 		

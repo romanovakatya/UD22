@@ -54,7 +54,7 @@ public class ControllerCientificoUpdate {
 						if (!"".equals(vistaUpdate.textFieldNomApels.getText())) {
 							cientifico.setNomApells(vistaUpdate.textFieldNomApels.getText());
 						} else {
-							cientifico.setNomApells("Un cientifico desconocido");
+							cientifico.setNomApells(cientifico.getNomApells());
 						}
 						
 						cientificoDAO.update(dNI, cientifico);

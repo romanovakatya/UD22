@@ -11,7 +11,6 @@ public class DataBase extends Conexion{
 	// atributos,
 	protected Connection conexion;
 	protected String db;
-	protected String tableName = "cliente";
 
 	private String QueryCreateTable = "CREATE TABLE clientes (\r\n" + "id int(11) AUTO_INCREMENT NOT NULL,\r\n"
 			+ "nombre varchar(250) DEFAULT NULL,\r\n" + "apellido varchar(250) DEFAULT NULL,\r\n"
